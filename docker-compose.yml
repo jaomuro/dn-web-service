@@ -1,0 +1,16 @@
+networks:
+  dinheirinho-network:
+    driver: bridge
+
+services:
+  dinheirinho-postgresql:
+    container_name: dinheirinho-db
+    env_file:
+      - ./.env.docker
+    image: 'bitnami/postgresql:latest'
+    networks:
+      - dinheirinho-network
+    ports:
+    - 5432:5432
+    volumes:
+      - ./dinheirinho-postgres-data/postgresql:/bitnami/postgresql

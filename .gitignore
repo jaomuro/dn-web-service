@@ -1,0 +1,5 @@
+node_modules
+dinheirinho-postgres-data/postgresql
+
+.env
+.env.docker
