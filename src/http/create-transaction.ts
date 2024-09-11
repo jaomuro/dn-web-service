@@ -8,6 +8,8 @@ export async function createTransaction(app: FastifyInstance) {
     "/transactions",
     {
       schema: {
+        tags: ["transactions"],
+        summary: "Create a new income or outcome transaction",
         body: z.object({
           title: z.string(),
           description: z.string(),
