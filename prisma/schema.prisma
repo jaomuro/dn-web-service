@@ -45,7 +45,7 @@ model Transaction {
   description    String
   type           tType
   category       String
-  value          Float
+  value          Int
   date           DateTime
   isDone         Boolean
   isFixed        Boolean
